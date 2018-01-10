@@ -16,10 +16,15 @@ class TestMath < Minitest::Test  #The word Addition can be replace with the name
 	end
 
 	def test_assert_that_10_minus_5_equals_5
-		assert_equal(10,subtraction(10,5))
+		result = subtraction(10,5)
+		assert_equal(5,result) # first number is what is expected result, 2nd number is what you're giving it
 	end
 
+	def test_assert_that_12_multiplied_by_12_equals_144
+		result = multiplication(12,12)
+		assert_equal(144,result)
+	end
 
-
+	de
 
 end
