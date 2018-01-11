@@ -16,15 +16,5 @@ get '/math_input' do
 	result = params[:math_answer]
 	p1 = params[:p1]
 	p2 = params[:p2]
-	if result == "addition"
-		erb :addition, :locals => {:result => result, :p1 => p1, :p2 => p2}
-	elsif result == "subtraction"
-		erb :subtraction, :locals => {:p1 => p1, :p2 => p2}
-	elsif result == "division"
-		erb :division, :locals => {:p1 => p1, :p2 => p2}
-	elsif result == "multiplication"
-		erb :multiplication, :locals => {:p1 => p1, :p2 => p2}
-	else
-		puts "Sorry, your answer must be addition, subraction, division or multiplication!"
-	end
+	erb :results, :locals => {:result => result, :p1 => p1, :p2 => p2}
 end
